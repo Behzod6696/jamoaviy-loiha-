@@ -26,6 +26,7 @@
     border: none;
     background-color: rgb(248, 57, 57);
     color: white;
+    
 }
 .inputs button:active{
     background-color: red;

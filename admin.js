@@ -18,6 +18,7 @@ async function getProduct(){
 function render(product){
         products.innerHTML = ""
         product.forEach(product => {
+            
             products.innerHTML += `
                          <div class="product">
                              <img src="${product.img}" alt="">
@@ -63,11 +64,11 @@ addbtn.addEventListener("click", async()=>{
     })
 })
 
-async function deleteProduct(id){
+async function deleteProduct(id) {
     await fetch(`${API}/${id}`,{
         method: "DELETE"
     })
-    getProduct();
+    getProduct()
 }
 
 getProduct()
