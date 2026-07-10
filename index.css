@@ -1,0 +1,154 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.shop{
+    width: 1440px;
+    height: auto;
+    border: 1px solid;
+    margin: auto;
+}
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 45px;
+}
+.logo img{
+    width: 278px;
+    height: 167px;
+}
+.info{
+    width: 447px;
+    height: 26px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header{
+    width: 100%;
+    height: 180px;
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    
+}
+.glamur{
+    width: 1260px;
+    height: 520px;
+    background-color: rgb(9, 9, 86);
+    margin: auto;
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.text{
+    width: 650px;
+    height: 472px;
+    color: white;
+
+}
+.img-brand img{
+    width: 450px;
+    height: 498px;
+    margin-top: 24px;
+}
+.malumot{
+    width: 591px;
+    height: 250px;
+    font-size: 30px;
+    color: white;
+    margin-top: 20px;
+}
+.text button{
+    width: 129px;
+    height: 50px;
+    border-radius: 6px;
+    border: none;
+    margin-top: 20px;
+    font-size: 22px;
+}
+.Do{
+    width: 100%;
+    height: 303px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+}
+.lorem{
+    width: 700px;
+    height: 140px;
+    text-align: center;
+    font-size: 22px;
+    color: grey;
+    margin-top: 20px;
+}
+.Dotext button{
+  width: 129px;
+  height: 50px;
+  border: none;
+  border-radius: 8px;
+  font-size: 20px;
+  background-color: rgb(255, 142, 142);
+  color: white;
+}
+.products{
+    width: 1260px;
+    height:auto ;
+    margin: auto;
+    
+}
+.products1{
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    justify-content: center;
+    align-items: center;
+    gap: 45px;
+}
+.price{
+    width: 200px;
+    height: 45px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.product{
+    width: 228px;
+    height: 306px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    gap: 5px;
+
+}
+.product button{
+    width: 200px;
+    height: 25px;
+    border-radius: 4px;
+    border: none;
+    background-color: rgb(254, 127, 129);
+    color: white;
+}
+.product p{
+    width: 200px;
+    height: auto;
+    text-align: center;
+    font-size: 12px;
+    color: gray;
+}
+.product img{
+    width: 200px;
+    height: 150px;
+    border-radius: 8px;
+    
+}
