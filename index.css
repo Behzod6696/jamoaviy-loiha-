@@ -152,3 +152,216 @@
     border-radius: 8px;
     
 }
+
+
+
+
+
+
+
+
+
+
+.recommend-section{
+    width:80%;
+    margin:60px auto;
+    text-align:center;
+}
+
+.recommend-section h2{
+    font-size:50px;
+    font-family:Georgia, serif;
+    color:#2d2d2d;
+    margin-bottom:35px;
+    font-weight:700;
+}
+
+.recommend-box{
+    display:flex;
+    justify-content:center;
+    gap:40px;
+}
+
+.item{
+    text-align:center;
+}
+
+.item img{
+    width:170px;
+    height:150px;
+   
+}
+
+.item p{
+    margin-top:12px;
+    font-size:16px;
+    color:#333;
+}
+
+
+.sale-section{
+    width:80%;
+    margin:80px auto;
+    background:#f7b6cb;
+    border-radius:20px;
+    padding:50px 60px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    overflow:hidden;
+}
+
+
+
+
+.mega-sale{
+    width:90%;
+    height:430px;
+    margin:60px auto;
+    background:#f7a8b8;
+    border-radius:10px;
+    position:relative;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 70px;
+    overflow:hidden;
+}
+
+.chegirma-chap{
+    z-index:2;
+}
+
+.chegirma-chap h2{
+    font-size:58px;
+    font-family:Georgia, serif;
+    color:#222;
+}
+
+.chegirma-chap h1{
+    font-size:90px;
+    color:transparent;
+    -webkit-text-stroke:2px #fff;
+    margin:10px 0 30px;
+}
+
+.chegirma-chap button{
+    width:220px;
+    height:50px;
+    background:#d77b84;
+    border:none;
+    color:#222;
+    font-size:20px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.chegirma-ong img{
+    width:320px;
+    position:relative;
+    z-index:2;
+}
+
+.aylana{
+    position:absolute;
+    width:150px;
+    height:150px;
+    border:18px solid rgba(255,255,255,.25);
+    border-radius:50%;
+    left:-40px;
+    bottom:-40px;
+}
+
+.kvadrat{
+    position:absolute;
+    width:130px;
+    height:130px;
+    background:rgba(255,255,255,.15);
+    right:220px;
+    top:80px;
+}
+
+.nuqtalar{
+    position:absolute;
+    width:120px;
+    height:120px;
+    right:120px;
+    top:50px;
+    background-image:radial-gradient(#fff 2px, transparent 2px);
+    background-size:14px 14px;
+    opacity:.6;
+}
+
+
+.footer{
+    width:90%;
+    margin:70px auto;
+    background:#f8f8f8;
+    padding:50px 60px;
+}
+
+.footer-box{
+    display:flex;
+    justify-content:space-between;
+}
+
+.blog{
+    width:180px;
+}
+
+.blog img{
+    width:90px;
+    margin:15px 0;
+}
+
+.blog p{
+    font-size:14px;
+    color:#555;
+    line-height:22px;
+}
+
+.help p,
+.services p{
+    margin:12px 0;
+    color:#666;
+    font-size:14px;
+}
+
+.app img{
+    width:130px;
+    display:block;
+    margin:12px 0;
+}
+
+.footer hr{
+    margin:35px 0 20px;
+    border:none;
+    border-top:1px solid #ccc;
+}
+
+.footer-bottom{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.footer-bottom p{
+    font-size:13px;
+    color:#666;
+}
+
+.icons{
+    display:flex;
+    gap:10px;
+}
+
+.icons i{
+    width:30px;
+    height:30px;
+    border-radius:50%;
+    background:#eee;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:16px;
+}
