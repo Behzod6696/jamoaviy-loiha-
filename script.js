@@ -1,5 +1,11 @@
 
+let productlar = []
+
 const adminBtn = document.querySelector(".singin")
+const cardBtn = document.querySelector(".cardBtn")
+cardBtn.addEventListener("click",()=>{
+  window.location.href = "card.html"
+})
 
 adminBtn.addEventListener("click",()=>{
        window.location.href = "admin.html"
@@ -10,9 +16,9 @@ const API = `https://69c66873f272266f3eac7bef.mockapi.io/product`
 
 async function getProduct(){
     const respons = await fetch(API) 
-    const data = await respons.json()
+    productlar = await respons.json()
 
-    render(data)
+    render(productlar)
 }
 
 function render(products){
@@ -27,10 +33,20 @@ function render(products){
                                 <p>$${product.price}</p>
                              </div>
                              <p>${product.information}</p>
-                             <button>Add to cart</button>
+                             <button onclick ="addtoCard(${product.id})">Add to cart</button>
                        </div>
         `
       });
 }
+function addtoCard(id){
+     const Product = productlar.find((item) =>  item.id == id)
+      
+     let cart = JSON.parse(localStorage.getItem("cart")) || []
+      
+     cart.push(Product)
 
+     localStorage.setItem("cart",JSON.stringify(cart))
+
+     alert("mahsulotlar savatiga bir mahsulot qushildi")
+}
 getProduct();

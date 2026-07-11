@@ -27,6 +27,24 @@
     justify-content: space-between;
     align-items: center;
 }
+.singin{
+    width: 80px;
+    height: 35px;
+    border-radius: 6px;
+    border: none;
+    background-color: rgb(103, 103, 250);
+    
+}
+.singin:active{
+    background-color: red;
+}
+.cardBtn{
+    width: 40px;
+    height: 35px;
+    border-radius: 6px;
+    border: none;
+    background-color: rgb(254, 169, 58);
+}
 .header{
     width: 100%;
     height: 180px;
@@ -138,6 +156,9 @@
     border: none;
     background-color: rgb(254, 127, 129);
     color: white;
+}
+.product button:active{
+    background-color: red;
 }
 .product p{
     width: 200px;
