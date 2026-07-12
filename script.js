@@ -47,6 +47,6 @@ function addtoCard(id){
 
      localStorage.setItem("cart",JSON.stringify(cart))
 
-     alert("mahsulotlar savatiga bir mahsulot qushildi")
+
 }
 getProduct();
