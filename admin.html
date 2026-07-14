@@ -1,28 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://cdn.boxicons.com/3.0.8/fonts/basic/boxicons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./admin.css">
 </head>
+
 <body>
-    
-<h1>Add Products</h1>
+    <div class="header">
+        <div class="logo">
+            <img src="./imgs/Group 2.png" alt="">
+            <div class="info">
+                <p class="hover-line" id="home">Home</p>
+                <p class="hover-line">Pages</p>
+                <p class="hover-line">Blog</p>
+                <p class="hover-line">Contact us</p>
+                <p class="hover-line">Shop</p>
+            </div>
 
-<div class="inputs">
+        </div>
+        <div>
+            <button class="singin">Singin in</button>
+            <button class="cardBtn"><i class="bx bx-cart-alt-2"></i></button>
+        </div>
+    </div>
 
-     <input type="text" id="name" placeholder="Name">
+    <h1 class="h1">Add Products</h1>
 
-     <input type="text" id="information" placeholder="Information">
+    <div class="inputs">
 
-     <input type="number" id="price" placeholder="Price">
+        <input type="text" id="name" placeholder="Name">
 
-     <input type="text" id="img" placeholder="Image URL">
-     <button class="btnadd">Add Product</button>
+        <input type="text" id="information" placeholder="Information">
 
-</div>
-<div class="products"></div>
-<script src="./admin.js"></script>
+        <input type="number" id="price" placeholder="Price">
+
+        <input type="text" id="img" placeholder="Image URL">
+        <button class="btnadd">Add Product</button>
+
+    </div>
+    <div class="products"></div>
+    <script src="./admin.js"></script>
 </body>
+
 </html>

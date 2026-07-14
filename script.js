@@ -3,6 +3,12 @@ let productlar = []
 
 const adminBtn = document.querySelector(".singin")
 const cardBtn = document.querySelector(".cardBtn")
+
+ const home = document.getElementById("home")
+ home.addEventListener("click",()=>{
+    window.location.href = "index.html"
+ })
+ 
 cardBtn.addEventListener("click",()=>{
   window.location.href = "card.html"
 })

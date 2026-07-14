@@ -385,3 +385,25 @@
     align-items:center;
     font-size:16px;
 }
+
+
+.hover-line {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.hover-line::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px; /* border matndan qancha pastda chiqishi */
+    width: 0;
+    height: 2px;
+    background: #000; /* border rangi */
+    transition: width 0.3s ease;
+}
+
+.hover-line:hover::after {
+    width: 100%;
+}

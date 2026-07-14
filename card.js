@@ -1,14 +1,24 @@
+
+const home = document.getElementById("home")
+home.addEventListener("click", () => {
+    window.location.href = "index.html"
+})
+const Singin = document.querySelector(".singin")
+Singin.addEventListener("click", () => {
+    window.location.href = "admin.html"
+})
+
 const cartProducts = document.querySelector(".cartProducts");
 
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-render(); 
+render();
 
-function render(){
+function render() {
 
-    cartProducts.innerHTML="";
+    cartProducts.innerHTML = "";
 
-    cart.forEach((product)=>{
+    cart.forEach((product) => {
 
         cartProducts.innerHTML += `
 
@@ -34,13 +44,13 @@ function render(){
 
 }
 
-function deleteCart(id){
+function deleteCart(id) {
 
-    cart = cart.filter((item)=> item.id != id);
+    cart = cart.filter((item) => item.id != id);
 
-    localStorage.setItem("cart",JSON.stringify(cart));
+    localStorage.setItem("cart", JSON.stringify(cart));
 
     render();
 
-} 
+}
 

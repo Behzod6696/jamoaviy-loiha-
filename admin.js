@@ -8,6 +8,18 @@ const name = document.getElementById("name");
 const information = document.getElementById("information");
 const price = document.getElementById("price");
 
+ const home = document.getElementById("home")
+ home.addEventListener("click",()=>{
+    window.location.href = "index.html"
+ })
+const Singin = document.querySelector(".singin")
+Singin.addEventListener("click",()=>{
+    window.location.href = "admin.html"
+})
+const cardBtn = document.querySelector(".cardBtn")
+cardBtn.addEventListener("click",()=>{
+    window.location.href = "card.html"
+})
 
 async function getProduct(){
     const respons = await fetch(API)
