@@ -7,31 +7,33 @@ const img = document.getElementById("img");
 const name = document.getElementById("name");
 const information = document.getElementById("information");
 const price = document.getElementById("price");
-
- const home = document.getElementById("home")
- home.addEventListener("click",()=>{
+let editId = null
+const home = document.getElementById("home")
+home.addEventListener("click", () => {
     window.location.href = "index.html"
- })
+})
 const Singin = document.querySelector(".singin")
-Singin.addEventListener("click",()=>{
+Singin.addEventListener("click", () => {
     window.location.href = "admin.html"
 })
 const cardBtn = document.querySelector(".cardBtn")
-cardBtn.addEventListener("click",()=>{
+cardBtn.addEventListener("click", () => {
     window.location.href = "card.html"
 })
 
-async function getProduct(){
+async function getProduct() {
     const respons = await fetch(API)
     const data = await respons.json()
+    console.log(data);
+    
     render(data)
 }
 
-function render(product){
-        products.innerHTML = ""
-        product.forEach(product => {
-            
-            products.innerHTML += `
+function render(product) {
+    products.innerHTML = ""
+    product.forEach(product => {
+
+        products.innerHTML += `
                          <div class="product">
                              <img src="${product.img}" alt="">
                              <div class="price">
@@ -43,44 +45,73 @@ function render(product){
                              <button onclick = "deleteProduct(${product.id})">Delete</button>
                        </div>
             `
-        });
+    });
 }
 
-addbtn.addEventListener("click", async()=>{
+addbtn.addEventListener("click", async () => {
 
-    if(!img.value.trim() || !name.value.trim() || !information.value.trim() || !price.value.trim()){
-    alert ("Barcha bo'sh maydonlarni tuldir!")
-    return
-} else{
+    if (!img.value.trim() || !name.value.trim() || !information.value.trim() || !price.value.trim()) {
+        alert("Barcha bo'sh maydonlarni tuldir!")
+        return
+    }
 
 
     const products1 = {
         img: img.value,
         name: name.value,
         price: price.value,
-        information:information.value
+        information: information.value
     }
 
-    await fetch(API,{
-        method: "POST",
-        headers: {
-            "Content-Type":"application/json"
-        },
-        body: JSON.stringify(products1)
-    })
-}
+    if (editId) {
+        await fetch(`${API}/${editId}`, {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(products1)
+
+   
+
+        })
+               editId = null;
+    } else {
+
+        await fetch(API, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(products1)
+        })
+    }
+
     getProduct();
 
-    inputs.forEach((input) =>{
+    inputs.forEach((input) => {
         input.value = ""
     })
 })
 
 async function deleteProduct(id) {
-    await fetch(`${API}/${id}`,{
+    await fetch(`${API}/${id}`, {
         method: "DELETE"
     })
     getProduct()
+}
+
+async function editProduct(id) {
+    const respons = await fetch(`${API}/${id}`)
+    const productm = await respons.json()
+     console.log(productm);
+     
+    img.value = productm.img;
+    name.value = productm.name;
+    information.value = productm.information;
+    price.value = productm.price;
+
+    editId = id
+
 }
 
 getProduct()
